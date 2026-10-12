@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2e8">
+    <title>사과게임</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="사과게임 처음 화면">
+          <span class="brand-mark" aria-hidden="true">🍎</span>
+          <span>사과게임</span>
+        </a>
+        <span class="edition">숫자 수확 · 01</span>
+      </header>
+
+      <section class="game-layout" aria-label="사과게임">
+        <div class="board-wrap">
+          <div class="board-heading">
+            <div>
+              <p class="eyebrow">ORCHARD NO. 08</p>
+              <h1>숫자 수확</h1>
+            </div>
+            <div class="round-tag" aria-label="8 곱하기 8 격자">8 <span>×</span> 8</div>
+          </div>
+          <div id="game-board" class="game-board" role="group" aria-label="숫자 게임 보드"></div>
+          <div class="board-foot">
+            <span class="legend-dot" aria-hidden="true"></span>
+            <span id="game-status" role="status" aria-live="polite">준비 완료</span>
+            <span class="board-foot-mark" aria-hidden="true">✳</span>
+          </div>
+        </div>
+
+        <aside class="score-panel" aria-label="게임 점수와 시간">
+          <div class="timer-block">
+            <div class="panel-label-row">
+              <span class="panel-label">남은 시간</span>
+              <span class="timer-icon" aria-hidden="true">◷</span>
+            </div>
+            <p id="timer" class="timer" aria-label="남은 시간 1분">01:00</p>
+            <div class="timer-track" aria-hidden="true"><span id="timer-progress"></span></div>
+          </div>
+
+          <div class="score-block">
+            <span class="panel-label">현재 점수</span>
+            <div class="score-line"><strong id="score">0</strong><span>점</span></div>
+          </div>
+
+          <div class="best-block">
+            <span class="panel-label">최고 기록</span>
+            <div class="best-line"><span class="best-star" aria-hidden="true">★</span><strong id="best-score">0</strong><span>점</span></div>
+          </div>
+
+          <div class="sum-block" aria-live="polite">
+            <span id="sum-label" class="panel-label">현재 합계</span>
+            <div class="sum-line"><strong id="selection-sum">0</strong><span id="sum-state">선택 대기</span></div>
+          </div>
+
+          <button id="start-button" class="start-button" type="button">
+            <span id="button-label">게임 시작</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="panel-caption">오늘의 수확을 시작해 보세요.</p>
+        </aside>
+      </section>
+
+      <footer class="page-footer">
+        <span>FIELD NOTES <span class="footer-slash">/</span> 08 × 08</span>
+        <span>GOOD THINGS GROW TOGETHER</span>
+      </footer>
+    </main>
+  </body>
+</html>
